@@ -13,7 +13,10 @@ Delete for deleting the record based on EmailID.
 # Pre-requesites
 NodeJS
 
-MySQL
+xampp
+
+MySQL - Queries for creating database and table are given in `queries.sql`.
+        For creating user, phpmyadmin can be used which can be accessed using xampp.
 
 # Modules
 Express
