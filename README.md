@@ -10,12 +10,13 @@ Search bar for searching the record based on EmailID.
 
 Delete for deleting the record based on EmailID.
 
-# Pre-requesites
+# Pre-requisites
 NodeJS
 
 xampp
 
-MySQL - Queries for creating database and table are given in `queries.sql`.
+MySQL - Queries for creating database and table are given in `db_intern.sql`.
+
         For creating user, phpmyadmin can be used which can be accessed using xampp.
 
 # Modules
