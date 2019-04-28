@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="lib/bootstrap-4.3.1/css/bootstrap.min.css"  rel="stylesheet" id="bootstrap-css">
+	<script type="text/javascript" src="lib/jquery-3.4.0.min.js"></script>
+	<script type="text/javascript" src="lib/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+	<title></title>
+	<style type="text/css">
+	@font-face {
+	  font-family: 'Karla';
+	  font-style: normal;
+	  font-weight: 400;
+	  src: url('fonts/Karla-Regular.ttf');
+	}
+	body {
+	  font-family: 'Karla';
+	}
+</style>
+</head>
+<body>
+	<script type="text/javascript">
+		patchgen()
+		{
+			var x=new XMLHttpRequest();
+			x.open("patch", "/");
+			x.send(null);
+		}
+	</script>
+	<div class="container">
+		<hr>
+		<div class="row justify-content-center" style="margin-top: 5%;">
+			<div class="col-md-6">
+				<div class="card">
+					<header class="card-header">
+						<h4 class="card-title mt-2">INSERT</h4>
+					</header>
+					<article class="card-body">
+						<form action="/insert" method="post">
+							<div class="form-row">
+								<div class="col form-group">
+									<label>Name </label>   
+									<input name="name" type="text" class="form-control" required>
+								</div>
+								<div class="col form-group">
+									<label>Password</label>
+									<input name="password" type="Password" class="form-control" placeholder=" " required>
+								</div> 
+							</div>
+							<div class="form-group">
+								<label>Phone Number</label>
+								<input name="phno" type="tel" class="form-control" placeholder="" required>
+							</div> 
+							<div class="form-group">
+								<label>Email Id</label>
+								<input name="email" type="email" class="form-control" placeholder="" required>
+								<small class="form-text text-muted">We'll never share your email with anyone else.</small>
+							</div> 
+							<div class="form-group" style="float:right;">
+								<button type="submit" class="btn btn-primary">Submit</button>
+							</div>  
+						</form>
+					</article> 
+				</div>
+				<div class="card">
+					<header class="card-header">
+						<h4 class="card-title mt-2">SEARCH</h4>
+						<div style="color:red;">
+							<%= message %>
+						</div>
+					</header>
+					<article class="card-body">
+						<form method="POST" action="/search?_method=get">
+							<div class="form-row">
+								<div class="col-md-10 ">
+									<input name="email_sh" type="email" class="form-control">
+								</div>
+								<div class="col-md-2">
+								<button type="submit" class="btn btn-primary">Search</button>
+								</div>
+							</div>
+						</form>
+						<div>
+			                <div><%= fe[0].user_name %></div>  
+			                <div><%= fe[0].password %></div>
+			                <div><%= fe[0].email_id %></div>
+			                <div><%= fe[0].phn_no %></div>
+			                <div><%= fe[0].time %></div>        
+						</div>
+					</article>
+				</div> 
+				<div class="card">
+					<header class="card-header">
+						<h4 class="card-title mt-2">DELETE</h4>
+						<div style="color:red;">
+							<%= message1 %>
+						</div>
+					</header>
+					<article class="card-body">
+						<form method="POST" action="/delete?_method=delete">
+							<input type="hidden" name="_method" value="post" />
+							<div class="form-row">
+								<div class="col-md-10 ">
+									<input name="email_sh" type="email" class="form-control">
+								</div>
+								<div class="col-md-2">
+									<button type="submit" class="btn btn-primary" >Delete</button>
+								</div>
+							</div>
+						</form>
+					</article>
+				</div> <!-- card.// -->
+			</div> <!-- col.//-->
+		</div> <!-- row.//-->
+	</div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+same file having server
+get post request
+mysql database
+html connect
+sql queries
+rest api
+bootstrap
