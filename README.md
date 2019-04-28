@@ -16,7 +16,6 @@ NodeJS
 xampp
 
 MySQL - Queries for creating database and table are given in `db_intern.sql`.
-
         For creating user, phpmyadmin can be used which can be accessed using xampp.
 
 # Modules
