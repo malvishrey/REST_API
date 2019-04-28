@@ -2,6 +2,14 @@
 REST API which will take request from the HTML form and insert the data into MySQL
 database along with the current Date and Time.
 
+# Operations
+
+Submit for inserting the data into MySQL database.
+
+Search bar for searching the record based on EmailID.
+
+Delete for deleting the record based on EmailID.
+
 # Pre-requesites
 NodeJS
 
